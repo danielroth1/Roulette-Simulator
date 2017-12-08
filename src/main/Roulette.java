@@ -83,11 +83,11 @@ public class Roulette {
 		if (onlyGameEndReason){
 			return gameEndReason;
 		}
-		System.out.println("ready");
+//		System.out.println("ready");
 		s = s.concat(g.toString());
 		s = s.concat("\ngame ended cause of: " + gameEndReason);
 		s = s.concat("\ncalculationTime = " + (System.currentTimeMillis()-time)/1000 + " s");
-		System.out.println(s);
+//		System.out.println(s);
 		return s;
 	}
 	
@@ -172,24 +172,23 @@ public class Roulette {
 		System.out.format(leftAlignFormatDouble, "games until finish of all unfinished games(average)", gamesUntilFinishOfAllUnfinishedGames);
 		System.out.format("+------------------------------------------------------+------------------+%n");
 		*/
-		s += s.format("+------------------------------------------------------+------------------+%n");
-		s += s.format(leftAlignFormatInteger, "number of games played", numberOfGames);
-		s += s.format(leftAlignFormatInteger, "maximum games played", maxGames);
-		s += s.format(leftAlignFormatInteger, "starting credits", credits);
-		s += s.format("+------------------------------------------------------+------------------+%n");
-		s += s.format(leftAlignFormatDouble, "money won average", moneyWonAverage);
-		s += s.format(leftAlignFormatDouble, "money won average(after " + gameEndsMaxGameCountReached + " successfull games)", moneyWonAfterSuccessfullGamesAverage);
-		s += s.format(leftAlignFormatInteger, "games(no more credits)", gameEndsNoMoreCredits);
-		s += s.format(leftAlignFormatInteger, "games(max games count reached)", gameEndsMaxGameCountReached);
-		s += s.format(leftAlignFormatDouble, "winning probability(%)", winningProbabilityInPercentage);
-		s += s.format(leftAlignFormatDouble, "games until finish(average)", gamesUntilFinishAverage);
-		s += s.format(leftAlignFormatDouble, "games until finish of all unfinished games(average)", gamesUntilFinishOfAllUnfinishedGames);
-		s += s.format("+------------------------------------------------------+------------------+%n");
-		s += s.format("calculation time = %f s", (System.currentTimeMillis()-time)/1000);
+		s += String.format("+------------------------------------------------------+------------------+%n");
+		s += String.format(leftAlignFormatInteger, "number of games played", numberOfGames);
+		s += String.format(leftAlignFormatInteger, "maximum games played", maxGames);
+		s += String.format(leftAlignFormatInteger, "starting credits", credits);
+		s += String.format("+------------------------------------------------------+------------------+%n");
+		s += String.format(leftAlignFormatDouble, "money won average", moneyWonAverage);
+		s += String.format(leftAlignFormatDouble, "money won average(after " + gameEndsMaxGameCountReached + " successfull games)", moneyWonAfterSuccessfullGamesAverage);
+		s += String.format(leftAlignFormatInteger, "games(no more credits)", gameEndsNoMoreCredits);
+		s += String.format(leftAlignFormatInteger, "games(max games count reached)", gameEndsMaxGameCountReached);
+		s += String.format(leftAlignFormatDouble, "winning probability(%)", winningProbabilityInPercentage);
+		s += String.format(leftAlignFormatDouble, "games until finish(average)", gamesUntilFinishAverage);
+		s += String.format(leftAlignFormatDouble, "games until finish of all unfinished games(average)", gamesUntilFinishOfAllUnfinishedGames);
+		s += String.format("+------------------------------------------------------+------------------+%n");
+		s += String.format("calculation time = %f s", (System.currentTimeMillis()-time)/1000);
 //		s = s + "money won average = " +  moneyWonAverage;
 //		s = s + "games until finish = " + gamesUntilFinish;
 //		s = s + "games until finish of all unfinished games = " + gamesUntilFinishOfAllUnfinishedGames;
-		
 		return s;
 	}
 	
@@ -199,7 +198,7 @@ public class Roulette {
 		final JScrollPane scroll = new JScrollPane(textArea);
 		
 //		JTextArea textArea = new JTextArea(13, 77);
-		textArea.setFont(new Font("Consolas", Font.PLAIN, 12));
+		textArea.setFont(new Font("Monospaced", Font.PLAIN, 12));
 		
 		JPanel contentPane = new JPanel();
 		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
