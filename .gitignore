@@ -1,3 +1,48 @@
+### Gradle
+/.gradle/
+build/
+out/
+
+### Build outputs
+/build/
+/dist/
+
+### macOS
+.DS_Store
+.AppleDouble
+._*
+.LSOverride
+Icon\r
+
+# Thumbnails
+._*
+
+### Java
+*.class
+*.jar
+*.war
+*.ear
+
+### Eclipse/IntelliJ
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+### Logs
+*.log
+
+### Temporary files
+*~
+*.tmp
+
+### Node / npm
+node_modules/
+
+### Others
+.vscode/
+coverage/
 
 # Created by https://www.gitignore.io/api/eclipse
 
